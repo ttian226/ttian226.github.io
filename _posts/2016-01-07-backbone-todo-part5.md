@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Backbone的Todos的实现5"
+title:      "Backbone Todos的实现5"
 subtitle:   "Todo视图"
 date:       2016-01-07 12:00:00
 author:     "wangxu"

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Backbone的Todos的实现2"
+title:      "Backbone Todos的实现2"
 subtitle:   "静态HTML"
 date:       2016-01-05 12:00:00
 author:     "wangxu"
