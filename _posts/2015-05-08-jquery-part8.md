@@ -1,0 +1,111 @@
+---
+layout:     post
+title:      "jQuery源码学习8"
+subtitle:   "迭代器的实现"
+date:       2015-05-08 12:00:00
+author:     "wangxu"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - jQuery
+---
+
+#### jQuery.each源码实现
+
+```javascript
+jQuery.extend({
+	each: function (obj, callback, args) {
+		var value,
+            i = 0,
+			length = obj.length,
+			isArray = Array.isArray(obj);
+
+		if (isArray) {
+			for (; i < length; i++) {
+				//callback(索引, 值)
+				value = callback.call(obj[i], i, obj[i]);
+
+                if (value === false) {
+                    break;
+                }
+			}
+		} else {
+			for (i in obj) {
+				//callback(属性, 值)
+				value = callback.call(obj[i], i, obj[i]);
+
+                if (value === false) {
+                    break;
+                }
+			}
+		}
+
+		return obj;
+	}
+});
+```
+
+#### 静态调用
+
+```javascript
+//遍历数组
+$.each([1, 2, 3], function (index, value) {
+	console.log(index + ' ' + value);
+});
+
+//输出
+//0 1
+//1 2
+//2 3
+
+//遍历对象
+$.each({a:'aa',b:'bb',c:'cc'}, function (index, value) {
+	console.log(index + ' ' + value);
+});
+
+//输出
+//a aa
+//b bb
+//c cc
+```
+
+#### 实例方法each
+
+```javascript
+jQuery.fn = jQuery.prototype = {
+    each: function (callback, args) {
+    	//直接调用静态方法each实现
+    	//这里this是一个Dom数组
+    	return jQuery.each(this, callback, args);
+    }
+};
+```
+
+例子
+
+```html
+<ul>
+  <li>list item 1</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+  <li>list item 4</li>
+  <li>list item 5</li>
+</ul>
+```
+
+```javascript
+//list是一个类Dom数组的jQuery对象
+var list = $("li");
+
+list.each(function (i, item) {
+	//根据源码callback.call(obj[i], i, obj[i])
+	//第一个参数（上下文即回调中的this）和第三个参数（item）相同
+	//所以：this item都指向同一个dom对象
+    console.log(this === item); //true
+    //转换为jQuery对象：$(this) $(item)
+});
+
+//由于实例方法是调用静态方法，以上代码等价如下：
+$.each(list, function (i, item) {
+	//...
+});
+```
