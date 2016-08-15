@@ -3,5 +3,5 @@
 * QQ:120050856
 * Email:wangxu825@163.com
 
-此Github主题来自[https://github.com/Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)
+此Github Page主题来自[https://github.com/Huxpro/huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)
 
