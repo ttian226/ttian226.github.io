@@ -1,13 +1,13 @@
 # Site settings
 title: In Arsenal We Trust
-SEOTitle: ttian226's blog - In Arsenal We Trust
+SEOTitle: WANGXU.TECH - 王旭的技术博客
 header-img: img/home-bg-o.jpg
 email: ttian226@gmail.com
-description: "Cool Blog"
+description: "王旭的技术博客"
 keyword: ""
-url: "http://ttian226.github.com"              # your host, for absolute URL
+url: "http://wangxu.tech"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
-indexTitle: MY BLOG
+indexTitle: WANGXU.TECH
 
 
 # Build settings
