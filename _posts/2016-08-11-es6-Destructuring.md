@@ -312,3 +312,25 @@ let { id, status, data: number } = jsonData;
 console.log(id, status, number);
 // 42, "OK", [867, 5309]
 ```
+
+5.遍历Map结构
+
+使用`for...of`遍历Map结构时，适合用解构的形式，可以很容易获取键名和键值。
+
+```javascript
+var map = new Map();
+
+map.set('first', 'hello');
+map.set('second', 'world');
+
+// 不使用解构，循环内部需要item[0],item[1]分别表示key和value
+for (let item of map) {
+  var key = item[0];
+  var value = item[1];
+}
+
+// 使用解构形式就很简单
+for (let [key, val] of map) {
+  console.log(key, val);
+}
+```
