@@ -1,3 +1,8 @@
+/*!
+ * WANGXU TECH v1.0.0 (http://ttian226.github.io)
+ * Copyright 2016 Hux
+ */
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -43,10 +48,15 @@
 }
 .sidebar-container .short-about p {
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .sidebar-container .short-about .list-inline > li {
   padding-left: 0px;
+}
+.sidebar-container .arsenal {
+  font-size: 16px;
+  color: #fc4549;
+  font-weight: 600;
 }
 body {
   font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
