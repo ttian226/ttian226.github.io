@@ -514,8 +514,9 @@ pre code {
   }
 }
 .post-content-preview {
+  font-family: Monaco, Menlo, Consolas, "Courier New", FontAwesome, monospace;
   font-size: 13px;
-  font-style: italic;
+  line-height: 1.6;
   color: #a3a3a3;
 }
 .post-content-preview:hover {
