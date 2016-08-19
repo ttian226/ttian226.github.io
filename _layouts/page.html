@@ -11,7 +11,7 @@ layout: default
                     <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
                     <!--<hr class="small">-->
                     <!--<span class="subheading">{{ page.description }}</span>-->
-                    <span class="subheading">前端学习总结,分享...</span>
+                    <span class="subheading" style="visibility: hidden">前端学习总结,分享...</span>
                 </div>
             </div>
         </div>
@@ -103,6 +103,7 @@ layout: default
                 <section class="visible-md visible-lg">
                     <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
                     <div class="short-about">
+                        <p class="desc">这里记录了我的学习笔记，如果你也热爱前端，欢迎与我交流。</p>
                         <p>Email: wangxu825@163.com</p>
                         <p>QQ: 120050856</p>
                         <p class="arsenal">In Arsenal We Trust</p>
