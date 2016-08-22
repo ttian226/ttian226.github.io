@@ -278,4 +278,69 @@ var arr = [...set];
 console.log(arr); //[1, 2, 3]
 ```
 
+### rest参数
+
+ES6引入rest参数，用户获取函数的多余参数。
+
+```javascript
+// 参数只有一个，values为所有的参数组成的数组
+function fn1(...values) {
+  console.log(values);  //[1, 2, 3, 4]
+}
+
+// 参数有多个，values为剩余参数组成的数组
+function fn2(val, ...values) {
+  console.log(val); //1
+  console.log(values);  //[2, 3, 4]
+}
+
+fn1(1, 2, 3, 4);
+fn2(1, 2, 3, 4);
+```
+
+例：使用rest参数来对参数求和
+
+```javascript
+function add(...values) {
+  let sum = 0;
+  for (let val of values) {
+    sum += val;
+  }
+  return sum;
+}
+
+add(1, 2, 3, 4);
+```
+
+rest参数可以用来替代`arguments`对象。区别在于`arguments`是类数组而rest参数是真正的数组。
+
+```javascript
+function fn(...values) {
+  console.log(Array.isArray(values)); //true
+  console.log(Array.isArray(arguments));  //false
+}
+
+fn(1, 2, 3, 4);
+```
+
+不使用rest参数，只使用`arguments`对象来对数组元素排序：
+
+```javascript
+// 先通过Array.prototype.slice把类数组对象转换为数组。
+function sort() {
+  return Array.prototype.slice.call(arguments).sort();
+}
+
+sort('cherries', 'apples', 'bananas');  //["apples", "bananas", "cherries"]
+```
+
+如果使用rest参数会更简洁（配合使用箭头函数）：
+
+```javascript
+const sort = (...values) => values.sort();  //["apples", "bananas", "cherries"]
+```
+
+注：rest参数只能是最后一个参数，它后面不能有参数，否则会报错。
+
+
 
