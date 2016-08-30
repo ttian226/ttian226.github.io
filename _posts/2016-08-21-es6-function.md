@@ -35,7 +35,7 @@ function log(x, y) {
 }
 ```
 
-ES6允许为参数的参数设置默认值。
+ES6允许为参数设置默认值。
 
 ```javascript
 function log(x, y = 'World') {
@@ -143,4 +143,45 @@ rest参数也不会计入`length`属性。
 ```javascript
 (function(...args) {}).length // 0
 ```
+
+### name属性
+
+函数的`name`属性，返回该函数的函数名
+
+```javascript
+function foo() {}
+foo.name  //'foo'
+```
+
+如果将一个匿名函数赋给一个变量，那么ES6返回这个变量名。
+
+```javascript
+var func = function () {};
+func.name  //'func'
+```
+
+通过`Function`构造函数返回的函数实例，`name`属性的值为`anonymous`。
+
+```javascript
+var fn = new Function();
+console.log(fn.name); //anonymous
+```
+
+`bind`返回的函数，`name`的属性名前面加上`bound`，例如：
+
+```javascript
+var getX = function () {
+  return this.x;
+};
+
+window.x = 9;
+var obj = {
+  x: 81
+};
+
+var fn = getX.bind(obj);
+console.log(fn.name); //bound getX
+```
+
+
 
