@@ -9,7 +9,7 @@ body {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: red;
+    /*background-color: red;*/
     transform: scale(0);
     position: absolute;
     opacity: 0.5;
