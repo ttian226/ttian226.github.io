@@ -3,7 +3,7 @@
  */
 
 $(function () {
-  $('body').on('click', touch);
+  $('body').on('click touchstart', touch);
 
   function touch(e) {
     $('.ripple').remove();
