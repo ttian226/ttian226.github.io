@@ -3,7 +3,7 @@
  */
 
 $(function () {
-  $('body').on('click touchstart', touch);
+  $('body').on('touchstart', touch);
 
   function touch(e) {
     $('.ripple').remove();
@@ -12,8 +12,8 @@ $(function () {
     var html = '<span class="ripple"></span>';
     $(this).append(html);
 
-    var x = e.pageX - w / 2;
-    var y = e.pageY - w / 2;
+    var x = e.originalEvent.touches[0].pageX - w / 2;
+    var y = e.originalEvent.touches[0].pageY - w / 2;
 
     $('.ripple').css({
       width: w,

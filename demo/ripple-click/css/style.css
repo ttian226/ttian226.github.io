@@ -16,7 +16,7 @@ body {
 }
 
 .rippleEffect {
-    animation: rippleDrop 1s linear;
+    animation: rippleDrop .6s linear;
 }
 
 @keyframes rippleDrop {
