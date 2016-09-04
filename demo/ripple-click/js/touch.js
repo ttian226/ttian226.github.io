@@ -17,13 +17,13 @@ $(function () {
 
     function getColor() {
       var cArr = [];
-      for (let i = 0; i < 6; i++) {
+      for (var i = 0; i < 6; i++) {
         var v = getRandomInt(0, 15);
         cArr[i] = arr[v];
       }
 
       var color = '#';
-      for (let i = 0; i < cArr.length; i++) {
+      for (var i = 0; i < cArr.length; i++) {
         color += cArr[i];
       }
       return color;
