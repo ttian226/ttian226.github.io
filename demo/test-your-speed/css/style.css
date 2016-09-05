@@ -63,3 +63,12 @@ body {
     vertical-align: middle;
 }
 
+.cpoint {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}

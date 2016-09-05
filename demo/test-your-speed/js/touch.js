@@ -67,11 +67,24 @@ $(function () {
     $tobox.hide();
   }
 
-  function end() {
-    if (started === 1) {
-      $number.css('color', color).html(tot++);
-    }
+  function end(e) {
+    var x = e.originalEvent.changedTouches[0].pageX;
+    var y = e.originalEvent.changedTouches[0].pageY;
+
     $('.ripple').addClass('rippleEffect');
+    var point = '<div class="cpoint" style="background-color: ' + color + '; top: ' + y + 'px; left: ' + x + 'px"></div>';
+
+    if (started === 1) {
+      $(point).appendTo($('body')).animate({
+        'top': '50%',
+        'left': '50%',
+        'opacity': 0,
+        'width': '20px',
+        'height': '20px'
+      }, 500, function () {
+        $number.css('color', color).html(tot++);
+      });
+    }
   }
 
   function start(e) {
