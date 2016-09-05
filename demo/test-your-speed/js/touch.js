@@ -82,7 +82,9 @@ $(function () {
         'width': '20px',
         'height': '20px'
       }, 500, function () {
-        $number.css('color', color).html(tot++);
+        if (started === 1) {
+          $number.css('color', color).html(tot++);
+        }
       });
     }
   }
