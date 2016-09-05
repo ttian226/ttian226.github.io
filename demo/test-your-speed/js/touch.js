@@ -62,7 +62,7 @@ $(function () {
     started = 0;
     $number.css({
       'color': '#000',
-      'font-size': '40px'
+      'font-size': '30px'
     }).html('score: ' + tot);
     $tobox.hide();
   }
