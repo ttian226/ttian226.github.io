@@ -60,7 +60,10 @@ $(function () {
 
   function gameover() {
     started = 0;
-    $number.css('color', '#000').html('score: ' + tot);
+    $number.css({
+      'color': '#000',
+      'font-size': '40px'
+    }).html('score: ' + tot);
     $tobox.hide();
   }
 
