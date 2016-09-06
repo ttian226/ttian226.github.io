@@ -26,6 +26,11 @@ function getColor() {
 $(function () {
   $(document).on('touchstart', start);
   $(document).on('touchend', end);
+
+  $(".process").bind('oanimationend animationend webkitAnimationEnd', function() {
+    gameover();
+  });
+
   var started = 0;
   var tot = 0;
   var color = '#000';
@@ -46,16 +51,8 @@ $(function () {
 
   function startgame() {
     $number.html(0);
-    $tobox.show();
     started = 1;
-    var cnt = Number($to_number.html());
-    var tof = setInterval(function () {
-      if (cnt === 0) {
-        clearInterval(tof);
-        gameover();
-      }
-      $to_number.html(cnt--);
-    }, 1000);
+    $('.process').addClass('start-to');
   }
 
   function gameover() {
@@ -64,7 +61,6 @@ $(function () {
       'color': '#000',
       'font-size': '30px'
     }).html('score: ' + tot);
-    $tobox.hide();
   }
 
   function end(e) {
