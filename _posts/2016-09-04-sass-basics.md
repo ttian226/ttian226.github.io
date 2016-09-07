@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Learn Sass"
+title:      "Sass Basics"
 subtitle:   "Sass入门"
 date:       2016-09-04 12:00:00
 author:     "wangxu"
@@ -225,4 +225,3 @@ aside[role="complementary"] {
   float: right;
   width: 31.25%; }
 ```
-
