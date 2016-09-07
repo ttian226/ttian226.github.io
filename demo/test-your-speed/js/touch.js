@@ -36,8 +36,6 @@ $(function () {
   var color = '#000';
 
   var $number = $('#number');
-  var $tobox = $('.box');
-  var $to_number = $('#to_number');
   var i = 2;
   var f = setInterval(function () {
     if (i === 0) {
