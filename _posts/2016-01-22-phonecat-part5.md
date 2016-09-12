@@ -41,6 +41,7 @@ var phonecatApp = angular.module('phonecatApp', [
 为了能让列表动起来，我们给列表中添加了样式类phone-listing，它是用来配合css来产生动画效果
 
 ```html
+{% raw %}
 <ul class="phones">
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
             class="thumbnail phone-listing">
@@ -49,6 +50,7 @@ var phonecatApp = angular.module('phonecatApp', [
           <p>{{phone.snippet}}</p>
         </li>
       </ul>
+{% endraw %}
 ```
 
 动画执行的流程是(那插入新元素来说):首先设置了插入起始的样式（opcaity:0;height:0;overflow:hidden这是在添加了ng-enter后才会生效），又设置了插入结束的样式（opacity:1;height:120px）。当有新的元素插入到列表中，angular会自动给元素添加ng-enter样式类，这时会触发transition。它会在0.5s内把opacity从0变化到1，把height从0变化到120px。ng-leave和ng-move原理也相同

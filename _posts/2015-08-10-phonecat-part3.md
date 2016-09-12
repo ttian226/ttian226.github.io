@@ -99,9 +99,10 @@ json文件格式：以`nexus-s.json`为例：
 }
 ```
 
-修改phone-detail.html，通过`{{}}`取得数据模型`phone`中的属性值
+修改phone-detail.html，通过`{% raw %}{{}}{% endraw %}`取得数据模型`phone`中的属性值
 
 ```html
+{% raw %}
 <img ng-src="{{phone.images[0]}}" class="phone">
 
 <h1>{{phone.name}}</h1>
@@ -215,4 +216,5 @@ json文件格式：以`nexus-s.json`为例：
         <dd>{{phone.additionalFeatures}}</dd>
     </li>
 </ul>
+{% endraw %}
 ```

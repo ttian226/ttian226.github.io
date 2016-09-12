@@ -38,11 +38,12 @@ filterModule.filter('checkmark', function() {
 ```
 
 在AngularJS模板中使用的过滤器语法为:
-`{{ expression | filter }}`
+`{% raw %}{{ expression | filter }}{% endraw %}`
 
 在模板phone-detail.html中添加了过滤器`checkmark`，例如`{{phone.connectivity.infrared | checkmark}}`,用`checkmark`替换数据模型`phone.connectivity.infrared`的值。
 
 ```html
+{% raw %}
 <li>
     <span>Connectivity</span>
     <dl>
@@ -52,6 +53,7 @@ filterModule.filter('checkmark', function() {
         <dd>{{phone.connectivity.gps | checkmark}}</dd>
     </dl>
 </li>
+{% endraw %}
 ```
 
 #### 事件处理器
@@ -74,6 +76,7 @@ phoneModule.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http', fu
 phone-detail.html中，把大图的`ngSrc`指令绑定到`mainImageUrl`属性上。同时注册一个`ngClick`指令到缩略图上。当一个用户点击缩略图的任意一个时，这个处理器会使用`setImage`事件处理函数来把`mainImageUrl`属性设置成选定缩略图的URL
 
 ```html
+{% raw %}
 <img ng-src="{{mainImageUrl}}" class="phone">
 
 <ul class="phone-thumbs">
@@ -81,6 +84,7 @@ phone-detail.html中，把大图的`ngSrc`指令绑定到`mainImageUrl`属性上
         <img ng-src="{{img}}" ng-click="setImage(img)">
     </li>
 </ul>
+{% endraw %}
 ```
 
 #### REST和定制服务

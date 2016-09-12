@@ -40,6 +40,7 @@ tags:
 这是一个模板：
 
 ```html
+{% raw %}
 <body ng-controller="PhoneListCtrl">
 <ul>
     <li ng-repeat="phone in phones">
@@ -48,6 +49,7 @@ tags:
     </li>
 </ul>
 </body>
+{% endraw %}
 ```
 
 * 在`<li>`标签里面的`ng-repeat="phone in phones"`语句是一个AngularJS迭代器。这个迭代器告诉AngularJS用这个`<li>`标签作为模板为列表中的每一部手机创建一个`<li>`元素。
@@ -80,6 +82,7 @@ function PhoneListCtrl($scope) {
 
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en" ng-app="phonecatApp">
 <head>
@@ -97,6 +100,7 @@ function PhoneListCtrl($scope) {
 </ul>
 </body>
 </html>
+{% endraw %}
 ```
 
 ```javascript
@@ -144,6 +148,7 @@ controller代码不做任何改变，只修改html代码，增加一个`<input>`
 用户在input框中输入一个关键字，会立刻在list列表中看到变化
 
 ```html
+{% raw %}
 <body ng-controller="PhoneListCtrl">
 <div class="container-fluid">
     <div class="row">
@@ -167,6 +172,7 @@ controller代码不做任何改变，只修改html代码，增加一个`<input>`
     </div>
 </div>
 </body>
+{% endraw %}
 ```
 
 ![Image](https://docs.angularjs.org/img/tutorial/tutorial_03.png)
@@ -182,6 +188,7 @@ controller代码不做任何改变，只修改html代码，增加一个`<input>`
 * 给`ng-repeat`增加`orderBy`过滤器来处理进入迭代器中的数据，过滤器以一个数组作为输入。复制一份副本，然后把副本重排序再输出到迭代器。
 
 ```html
+{% raw %}
 <body ng-controller="PhoneListCtrl">
 <div class="container-fluid">
     <div class="row">
@@ -209,6 +216,7 @@ controller代码不做任何改变，只修改html代码，增加一个`<input>`
     </div>
 </div>
 </body>
+{% endraw %}
 ```
 
 ![Image](https://docs.angularjs.org/img/tutorial/tutorial_04.png)
@@ -336,6 +344,7 @@ app.controller('PhoneListCtrl', function($scope, $http) {
 修改模板如下：
 
 ```html
+{% raw %}
 <body ng-controller="PhoneListCtrl">
 <div class="container-fluid">
     <div class="row">
@@ -364,10 +373,11 @@ app.controller('PhoneListCtrl', function($scope, $http) {
     </div>
 </div>
 </body>
+{% endraw %}
 ```
 关于`ng-src`:
 
-我们同样为每条记录添加手机图片，只需要使用`ng-src`指令代替`<img>`的`src`属性标签就可以了。如果我们仅仅用一个正常`src`属性来进行绑定`<img class="diagram" src="{{phone.imageUrl}}">`，浏览器会把AngularJS的`{{ 表达式 }}`标记直接进行字面解释，并且发起一个向非法url`http://localhost:8000/app/{{phone.imageUrl}}`的请求。因为浏览器载入页面时，同时也会请求载入图片，AngularJS在页面载入完毕时才开始编译——浏览器请求载入图片时`{{phone.imageUrl}}`还没得到编译！有了这个`ng-src`指令会避免产生这种情况，使用`ng-src`指令防止浏览器产生一个指向非法地址的请求。
+我们同样为每条记录添加手机图片，只需要使用`ng-src`指令代替`<img>`的`src`属性标签就可以了。如果我们仅仅用一个正常`src`属性来进行绑定`<img class="diagram" src="{{phone.imageUrl}}">`，浏览器会把AngularJS的`{% raw %}{{ 表达式 }}{% endraw %}`标记直接进行字面解释，并且发起一个向非法url`http://localhost:8000/app/{{phone.imageUrl}}`的请求。因为浏览器载入页面时，同时也会请求载入图片，AngularJS在页面载入完毕时才开始编译——浏览器请求载入图片时`{{phone.imageUrl}}`还没得到编译！有了这个`ng-src`指令会避免产生这种情况，使用`ng-src`指令防止浏览器产生一个指向非法地址的请求。
 
 json文件中为每个对象增加两个属性'id'和'imageUrl':
 

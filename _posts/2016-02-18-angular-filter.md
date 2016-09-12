@@ -12,12 +12,14 @@ tags:
 #### 过滤ngRepeat的列表
 
 ```html
+{% raw %}
 <body ng-app="app" ng-controller="TestCtrl as test">
   <input type="text" ng-model="search">
   <p ng-repeat="person in test.people | filter:search">
     {{person.name}}
   </p>
 </body>
+{% endraw %}
 ```
 
 ```javascript
@@ -58,12 +60,14 @@ angular.module('app', [])
 #### 自定义过滤器
 
 ```html
+{% raw %}
 <body ng-app="app" ng-controller="TestCtrl as test">
   <input type="text" ng-model="test.myString">
   <h2>
     {{test.myString | capitalize}}
   </h2>
 </body>
+{% endraw %}
 ```
 
 ```javascript
@@ -97,6 +101,7 @@ angular.module('app', [])
 #### 注入<filterName>Filter到控制器
 
 ```html
+{% raw %}
 <div ng-controller="FilterController as ctrl">
   <div>
     All entries:
@@ -107,6 +112,7 @@ angular.module('app', [])
     <span ng-repeat="entry in ctrl.filteredArray">{{entry.name}} </span>
   </div>
 </div>
+{% endraw %}
 ```
 
 ```javascript
@@ -130,7 +136,9 @@ angular.module('FilterInControllerModule', [])
 也可以通过模板进行过滤，如下：
 
 ```html
+{% raw %}
 <span ng-repeat="entry in ctrl.array | filter: 'a'">{{entry.name}} </span>
+{% endraw %}
 ```
 
 [完整代码](http://plnkr.co/edit/uWeJV7HeDLfLxHuFDcxm)

@@ -27,9 +27,11 @@ controller只能做两件事：
 #### 初始化$scope对象
 
 ```html
+{% raw %}
 <div ng-controller="GreetingController">
   {{ greeting }}
 </div>
+{% endraw %}
 ```
 
 ```javascript
@@ -57,9 +59,11 @@ myApp.controller('DoubleController', ['$scope', function($scope) {
 一旦controller被绑定到dom上，`double`方法就可以在模板上的表达式里使用
 
 ```html
+{% raw %}
 <div ng-controller="DoubleController">
   Two times <input ng-model="num"> equals {{ double(num) }}
 </div>
+{% endraw %}
 ```
 
 #### 正确的使用控制器
@@ -75,11 +79,13 @@ myApp.controller('DoubleController', ['$scope', function($scope) {
     3. 一个controller，包含两个方法分别设置了spice的值
 
 ```html
+{% raw %}
 <div ng-controller="SpicyController">
  <button ng-click="chiliSpicy()">Chili</button>
  <button ng-click="jalapenoSpicy()">Jalapeño</button>
  <p>The food is {{spice}} spicy!</p>
 </div>
+{% endraw %}
 ```
 
 ```javascript
@@ -111,12 +117,14 @@ myApp.controller('SpicyController', ['$scope', function($scope) {
 controller中的方法也可以带参数，下面的例子上通过上面例子改进来的
 
 ```html
+{% raw %}
 <div ng-controller="SpicyController">
  <input ng-model="customSpice">
  <button ng-click="spicy('chili')">Chili</button>
  <button ng-click="spicy(customSpice)">Custom spice</button>
  <p>The food is {{spice}} spicy!</p>
 </div>
+{% endraw %}
 ```
 
 ```javascript
@@ -140,6 +148,7 @@ SpicyController中只定义了一个方法`spicy`，它带了一个参数`spice`
 通常情况下都是给不同层次的Dom来绑定controller，因为ng-controller指令创建了一个新的子作用域。我们可以继承其它作用域的scope对象。在每个controller中的`$scope`对象都可以访问到在更高层级作用域上定义的属性和方法。
 
 ```html
+{% raw %}
 <div class="spicy">
   <div ng-controller="MainController">
     <p>Good {{timeOfDay}}, {{name}}!</p>
@@ -153,6 +162,7 @@ SpicyController中只定义了一个方法`spicy`，它带了一个参数`spice`
     </div>
   </div>
 </div>
+{% endraw %}
 ```
 
 ```css

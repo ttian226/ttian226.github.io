@@ -43,10 +43,12 @@ $btn.on('click', function(e) {
 *通过变量的方式来控制css。通过数据模型的变化来引导视图的变化，而不是直接操作视图。*
 
 ```html
+{% raw %}
 <div ng-controller="CSSCtrl">
     <p class="text-{{color}}">测试CSS样式</p>
     <button class="btn btn-default" ng-click="setGreen()">绿色</button>
 </div>
+{% endraw %}
 ```
 
 ```javascript
@@ -74,11 +76,13 @@ module.controller('CSSCtrl', ['$scope', function($scope) {
 ```
 
 ```html
+{% raw %}
 <div ng-controller="HeaderController">
     <div ng-class="{error: isError, warning: isWarning}">{{messageText}}</div>
     <button ng-click="showError()">Simulate Error</button>
     <button ng-click="showWarning()">Simulate Warning</button>
 </div>
+{% endraw %}
 ```
 
 ```javascript

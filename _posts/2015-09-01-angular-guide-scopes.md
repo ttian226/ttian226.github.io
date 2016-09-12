@@ -19,6 +19,7 @@ Scope是作为controller和view的纽带，在模板链接阶段，指令给scop
 控制器和指令都都拥有指向scope的引用，这种安排把控制器从指令和DOM中剥离出来。
 
 ```html
+{% raw %}
 <div ng-controller="MyController">
     Your name:
     <input type="text" ng-model="username">
@@ -26,6 +27,7 @@ Scope是作为controller和view的纽带，在模板链接阶段，指令给scop
     <hr>
     {{greeting}}
 </div>
+{% endraw %}
 ```
 
 ```javascript

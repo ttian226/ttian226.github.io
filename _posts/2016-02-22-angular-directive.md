@@ -86,13 +86,17 @@ angular.module('docsTemplateUrlDirective', [])
 customer-name.html
 
 ```html
+{% raw %}
 Name: {{customer.name}}
+{% endraw %}
 ```
 
 customer-address.html
 
 ```html
+{% raw %}
 Address: {{customer.address}}
+{% endraw %}
 ```
 
 ```javascript
@@ -199,7 +203,9 @@ angular.module('docsScopeProblemExample', [])
 my-customer-iso.html
 
 ```html
+{% raw %}
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
+{% endraw %}
 ```
 
 ```javascript
@@ -238,9 +244,11 @@ angular.module('docsIsolateScopeDirective', [])
 my-customer-plus-vojta.html
 
 ```html
+{% raw %}
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
 <hr>
 Name: {{vojta.name}} Address: {{vojta.address}}
+{% endraw %}
 ```
 
 

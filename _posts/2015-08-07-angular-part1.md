@@ -14,9 +14,10 @@ tags:
 * 除了引入的`angular.js`没有任何js代码。
 * 通过`ng-model`给`<input>`绑定一个模型变量`greeting.text`
 * 这个模型变量的$scope是$rootScope（全局的），也就是在html任何位置都可以引入这个模型变量
-* 通过`{{}}`引入模型变量
+* 通过`{% raw %}{{}}{% endraw %}`引入模型变量
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
@@ -30,6 +31,7 @@ tags:
 </body>
 <script src="angular.min.js"></script>
 </html>
+{% endraw %}
 ```
 
 **双向绑定**
@@ -43,6 +45,7 @@ tags:
 * 由于`ng-controller`绑定了`<div>`，所以`$scope`作用域为这个`<div>`，即数据模型只在这个`<div>`中可以被引用。
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en" ng-app="hellapp">
 <head>
@@ -56,6 +59,7 @@ tags:
 <script src="angular.min.js"></script>
 <script src="controller.js"></script>
 </html>
+{% endraw %}
 ```
 
 ```javascript
@@ -116,10 +120,12 @@ myModule.directive('hello', function() {
 ##### Model
 
 ```html
+{% raw %}
 <div>
     <input ng-model="greeting.text"/>
     <p>{{greeting.text}},AngularJS</p>
 </div>
+{% endraw %}
 ```
 内部原理：
 
@@ -137,6 +143,7 @@ myModule.directive('hello', function() {
 * 因为在`ListCtrl`的作用域中找不到`$scope.department`,所以会依次向上级作用域查找`department`，因为`department`是定义在根作用域中(在`GreetCtrl`中定义了`$rootScope.department`)，所以能够引用到。
 
 ```html
+{% raw %}
 <!doctype html>
 <html ng-app="MyModule">
 <head>
@@ -159,6 +166,7 @@ myModule.directive('hello', function() {
 <script src="angular.min.js"></script>
 <script src="controller.js"></script>
 </html>
+{% endraw %}
 ```
 
 ```javascript
@@ -179,6 +187,7 @@ myModule.controller('ListCtrl', ['$scope', function($scope) {
 例子1
 
 ```html
+{% raw %}
 <!doctype html>
 <html ng-app="MyModule">
 <head>
@@ -199,6 +208,7 @@ myModule.controller('ListCtrl', ['$scope', function($scope) {
 <script src="angular.min.js"></script>
 <script src="controller.js"></script>
 </html>
+{% endraw %}
 ```
 
 ```javascript
@@ -230,6 +240,7 @@ myModule.controller('Controller2', ['$scope', function($scope) {
 * `ng-repeat="i in [1]"`为内联表达式，AngularJS支持这种内联写法
 
 ```html
+{% raw %}
 <!doctype html>
 <html ng-app="MyModule">
 <head>
@@ -263,6 +274,7 @@ myModule.controller('Controller2', ['$scope', function($scope) {
 <script src="angular.min.js"></script>
 <script src="controller.js"></script>
 </html>
+{% endraw %}
 ```
 
 ```javascript

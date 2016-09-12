@@ -276,6 +276,31 @@ The `@each` directive usually has the form `@each $var in <list or map>`. `$var`
   background-image: url("/images/salamander.png"); }
 ```
 
+#### @while
+
+The `@while` directive takes a SassScript expression and repeatedly outputs the nested styles until the statement evaluates to false. 
+
+```scss
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} { width: 2em * $i; }
+  $i: $i - 2;
+}
+```
+
+is compiled to:
+
+```css
+.item-6 {
+  width: 12em; }
+
+.item-4 {
+  width: 8em; }
+
+.item-2 {
+  width: 4em; }
+```
+
 ### Function Directives
 
 使用`@function`定义函数。使用`@return`返回函数的值。

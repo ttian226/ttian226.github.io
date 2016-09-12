@@ -144,16 +144,18 @@ module.directive('hello', function() {
 
 scope的绑定策略：
     
-    1. @，把当前属性作为字符串传递。你还可以绑定来自外层scope的值，在属性值中插入{{}}即可。
+    1. @，把当前属性作为字符串传递。你还可以绑定来自外层scope的值，在属性值中插入{% raw %}{{}}{% endraw %}即可。
     2. =，与父scope中的属性进行双向绑定。
     3. &，传递一个来自父scope的函数，稍后调用。
 
 ##### 使用`@`绑定的例子
 
 ```html
+{% raw %}
 <div ng-controller="MyCtrl">
     <drink flavor="{{ctrlFlavor}}"></drink>
 </div>
+{% endraw %}
 ```
 
 ```javascript

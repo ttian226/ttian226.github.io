@@ -16,6 +16,7 @@ tags:
 index.html,使用`ngAnimate`指令需要引入`angular-animate.js`文件
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en" ng-app="bookStoreApp">
 <head>
@@ -37,6 +38,7 @@ index.html,使用`ngAnimate`指令需要引入`angular-animate.js`文件
 <div class="page {{pageClass}}" ng-view></div>
 </body>
 </html>
+{% endraw %}
 ```
 
 app.js，定义主模块`bookStoreApp`，需要依赖`ngRoute`,`ngAnimate`模块，控制器模块`bookStoreCtrls`。（`bookStoreFilters`，`bookStoreServices`，`bookStoreDirectives`这3个模块没有实际业务代码）
