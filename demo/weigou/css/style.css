@@ -13,7 +13,7 @@ html, body {
 }
 
 body::after {
-    content: url("../img/food1.png") url("../img/food2.png") url("../img/food3.png") url("../img/food4.png");
+    content: url("../img/food1.png") url("../img/food2.png") url("../img/food3.png") url("../img/food4.png") url("../img/food5.png");
     display: none;
 }
 
