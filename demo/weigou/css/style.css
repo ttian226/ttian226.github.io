@@ -26,7 +26,8 @@ body::after {
     background-size: 100% 100%;
     left: 50%;
     top: 25%;
-    /*transform: translate(-50%, -25%);*/
+    margin-left: -175px;
+    margin-top: -25%;
 }
 
 
@@ -152,6 +153,7 @@ body::after {
     border: 1px solid gold;
     background: #30250f;
     border-radius: 15px;
+    box-shadow: inset 1px 1px 10px 0 black;
 }
 
 .bar .bar-middle {
@@ -197,6 +199,7 @@ body::after {
     .dog {
         width: 370px;
         height: 370px;
+        margin-left: -185px;
     }
     .click-area {
         width: 155px;
@@ -229,6 +232,7 @@ body::after {
     .dog {
         width: 500px;
         height: 500px;
+        margin-left: -250px;
     }
     .click-area {
         width: 230px;
@@ -261,7 +265,7 @@ body::after {
         width: 300px;
         height: 300px;
         top: 23%;
-        /*transform: translate(-50%, -23%);*/
+        margin-left: -150px;
     }
     .click-area {
         width: 125px;
@@ -288,7 +292,6 @@ body::after {
         width: 280px;
         height: 280px;
         top: 18%;
-        /*transform: translate(-50%, -18%);*/
         margin-left: -140px;
     }
     .click-area {
