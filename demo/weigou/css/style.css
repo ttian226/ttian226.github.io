@@ -12,6 +12,7 @@ html, body {
     height: 100%;
 }
 
+/*default iphone6*/
 .dog {
     position: absolute;
     width: 350px;
@@ -23,25 +24,179 @@ html, body {
     transform: translate(-50%, -25%);
 }
 
+
+.face {
+    position: absolute;
+    top: 52%;
+    left: 39%;
+    width: 74px;
+    height: 74px;
+    background: url("../img/face-1.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.mouse-up {
+    background-image: url("../img/face-2.png");
+}
+
+.mouse-up-active {
+    animation-name: mouse-up;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mouse-up {
+    0% {
+        background-image: url("../img/face-1.png");
+    }
+    50% {
+        background-image: url("../img/face-2.png");
+    }
+    100% {
+        background-image: url("../img/face-1.png");
+    }
+}
+
+.mouse-eat-active {
+    animation-name: mouse-eat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mouse-eat {
+    0% {
+        background-image: url("../img/face-3.png");
+    }
+    50% {
+        background-image: url("../img/face-4.png");
+    }
+    100% {
+        background-image: url("../img/face-3.png");
+    }
+}
+
 .food {
     position: absolute;
-    width: 25px;
-    height: 25px;
-    /*top: 80%;*/
-    /*left: 45%;*/
-    /*background: url("../img/food5.png") no-repeat center center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center center;*/
+    width: 40px;
+    height: 40px;
     background-size: cover;
     /*transition: all .5s;*/
 }
 
-.active {
-    /*top: 40%;*/
-    /*left: 45%;*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*transform: rotate(360deg);*/
+.click-area {
+    position: absolute;
+    bottom: 10%;
+    width: 145px;
+    height: 103px;
 }
+
+.left {
+    left: 7%;
+    background: url("../img/dish1.png") no-repeat center;
+    background-size: 100%;
+}
+
+.right {
+    right: 7%;
+    background: url("../img/dish2.png") no-repeat center;
+    background-size: 100%;
+}
+
+/*iphone6plus*/
+@media only screen and (min-width : 376px) {
+    .dog {
+        width: 370px;
+        height: 370px;
+    }
+    .click-area {
+        width: 155px;
+        height: 110px;
+        bottom: 11%;
+    }
+    .left {
+        left: 8%;
+    }
+    .right {
+        right: 8%;
+    }
+    .face {
+        width: 78px;
+        height: 78px;
+    }
+}
+
+/*ipad*/
+@media only screen and (min-width : 768px) {
+    .dog {
+        width: 500px;
+        height: 500px;
+    }
+    .click-area {
+        width: 230px;
+        height: 163px;
+    }
+    .left {
+        left: 10%;
+    }
+    .right {
+        right: 10%;
+    }
+    .face {
+        width: 106px;
+        height: 106px;
+    }
+}
+
+/*iphone5*/
+@media only screen and (max-height : 568px) {
+    .dog {
+        width: 300px;
+        height: 300px;
+        top: 23%;
+        transform: translate(-50%, -23%);
+    }
+    .click-area {
+        width: 125px;
+        height: 89px;
+    }
+    .face {
+        width: 63px;
+        height: 63px;
+    }
+}
+
+/*iphone4*/
+@media only screen and (max-height : 480px) {
+    .dog {
+        width: 280px;
+        height: 280px;
+        top: 18%;
+        transform: translate(-50%, -18%);
+    }
+    .click-area {
+        width: 120px;
+        height: 85px;
+    }
+    .left {
+        left: 9%;
+    }
+    .right {
+        right: 9%;
+    }
+    .face {
+        width: 59px;
+        height: 59px;
+    }
+}
+
+/*
+.active {
+    top: 40%;
+    left: 45%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(360deg);
+}
+*/
 
 

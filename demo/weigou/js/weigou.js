@@ -22,35 +22,42 @@ $.fn.animateRotate = function(angle, duration, complete) {
 $('#MyDiv2').animateRotate(90);
 
 $(function () {
-  $(document).on('touchstart', start);
-  $(document).on('touchend', end);
+  $('.click-area').on('touchstart', start);
+  $('.click-area').on('touchend', end);
 
-  var wHeight = $(window).height();
-  var mouthTop = $('.dog').offset().top + 200;
+  var boxWidth = $('.dog').width();
+  var mouthTop = $('.dog').offset().top + 4 * boxWidth / 7;
+  var winWidth = $(window).width();
   
   function randomfood() {
     var num = Math.floor(Math.random() * 5) + 1;
     return 'img/food' + num + '.png';
   }
   
-  function start(e) {
-    var r = 25 / 2; //初始食物半径
-    var x = e.originalEvent.touches[0].pageX - r;
-    var y = e.originalEvent.touches[0].pageY - r;
+  function end(e) {
+    var r = 40 / 2; //初始食物半径
+    var x = e.originalEvent.changedTouches[0].pageX - r;
+    var y = e.originalEvent.changedTouches[0].pageY - r;
     var style = 'top:' + y + 'px; left:' + x + 'px;background-image:url(' + randomfood() + ')';
     var food = '<div class="food" style="' + style + '"></div>';
+    var left = (winWidth / 2 - 25 / 2) + 'px';
     $(food).appendTo($('body')).animateRotate(180).animate({
       'top': mouthTop,
-      'left': '50%',
-      'width': '40px',
-      'height': '40px',
+      'left': left,
+      'width': '25px',
+      'height': '25px',
       'opacity': '0.8'
     }, 500, function () {
       $(this).remove();
-    })
+      $('.face').addClass('mouse-up');
+      setTimeout(function () {
+        $('.face').removeClass('mouse-up');
+      }, 100);
+    });
   }
   
-  function end(e) {
-
+  function start(e) {
+    // $('.face').removeClass('mouse-up');
+    // $('.face').removeClass('mouse-eat-active');
   }
 });
