@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--<link rel="stylesheet" href="../../dist/css/bootstrap.css">-->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #4db6ac;
+    }
+    .box {
+      margin: 50px auto;
+      width: 400px;
+      height: 60px;
+      background: #757575;
+      border: 2px solid #f0b94e;
+      border-radius: 30px;
+      box-shadow: inset 2px 2px 15px 0 black;
+      padding: 2px;
+    }
+
+    /*
+    .inner {
+      background: gold;
+      width: 100%;
+      height: 100%;
+      border-radius: 26px;
+    }
+    */
+
+    .inner {
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      border-radius: 26px;
+      overflow: hidden;
+    }
+
+    .bar {
+      width: 100%;
+      height: 100%;
+      border-radius: 26px;
+      background: gold;
+      box-shadow: inset -15px 1px 10px 3px rgba(255,255,255, 0.6), inset -35px 2px 20px 3px rgba(255,255,255, 0.5);
+    }
+
+    .start-to {
+      animation-name: timeout;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes timeout {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="inner">
+    <div class="bar start-to"></div>
+  </div>
+</div>
+</body>
+</html>
