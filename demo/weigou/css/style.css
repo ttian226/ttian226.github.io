@@ -12,6 +12,11 @@ html, body {
     height: 100%;
 }
 
+body::after {
+    content: url("../img/food1.png") url("../img/food2.png") url("../img/food3.png") url("../img/food4.png");
+    display: none;
+}
+
 /*default iphone6*/
 .dog {
     position: absolute;
