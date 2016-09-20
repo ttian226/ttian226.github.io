@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 
 body {
@@ -141,6 +147,11 @@ body::after {
     position: relative;
     height: 100%;
     width: 80%;
+
+    border: 1px solid gold;
+    background: #30250f;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 15px 0 black;
 }
 
 .bar .bar-bg {
@@ -153,7 +164,7 @@ body::after {
     border: 1px solid gold;
     background: #30250f;
     border-radius: 15px;
-    box-shadow: inset 1px 1px 10px 0 black;
+    box-shadow: inset 2px 2px 15px 0 black;
 }
 
 .bar .bar-middle {
@@ -165,6 +176,7 @@ body::after {
     background: gold;
     z-index: 100;
     border-radius: 15px;
+    /*border: 1px solid #000;*/
 }
 
 .start-to {
