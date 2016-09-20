@@ -26,7 +26,7 @@ body::after {
     background-size: 100% 100%;
     left: 50%;
     top: 25%;
-    transform: translate(-50%, -25%);
+    /*transform: translate(-50%, -25%);*/
 }
 
 
@@ -154,25 +154,42 @@ body::after {
     border-radius: 15px;
 }
 
+.bar .bar-middle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: gold;
+    z-index: 100;
+    border-radius: 15px;
+}
+
+.start-to {
+    animation-name: timeout;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes timeout {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
 /*.bar .bar-front {*/
     /*position: absolute;*/
     /*top: 0;*/
     /*left: 0;*/
     /*width: 100%;*/
     /*height: 100%;*/
-    /*background: gold;*/
-    /*z-index: 100;*/
-/*}*/
-
-/*.time-box .bar {*/
-    /*display: table-cell;*/
-    /*!*background: gold;*!*/
-    /*height: 100%;*/
-    /*width: 80%;*/
-    /*!*border: 1px solid #ffffff;*!*/
-    /*!*border-radius: 20px;*!*/
-    /*background: url("../img/timebar.png") no-repeat center;*/
-    /*background-size: 100%;*/
+    /*background: #eee;*/
+    /*z-index: 200;*/
+    /*border-radius: 15px;*/
 /*}*/
 
 /*iphone6plus*/
@@ -244,7 +261,7 @@ body::after {
         width: 300px;
         height: 300px;
         top: 23%;
-        transform: translate(-50%, -23%);
+        /*transform: translate(-50%, -23%);*/
     }
     .click-area {
         width: 125px;
@@ -271,7 +288,8 @@ body::after {
         width: 280px;
         height: 280px;
         top: 18%;
-        transform: translate(-50%, -18%);
+        /*transform: translate(-50%, -18%);*/
+        margin-left: -140px;
     }
     .click-area {
         width: 120px;
