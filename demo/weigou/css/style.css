@@ -167,6 +167,7 @@ body::after {
     border-radius: 13px;
     /*background: url("../img/bar.png") no-repeat center center;*/
     background: gold no-repeat center center;
+    box-shadow: inset -15px 1px 10px 3px rgba(255,255,255, 0.6), inset -35px 2px 20px 3px rgba(255,255,255, 0.5);
     /*background-size: 100% 100%;*/
     background-size: cover;
 }
@@ -180,11 +181,17 @@ body::after {
 }
 
 @keyframes timeout {
+    /*from {*/
+        /*margin-left: 0;*/
+    /*}*/
+    /*to {*/
+        /*margin-left: -100%;*/
+    /*}*/
     from {
-        margin-left: 0;
+        width: 100%;
     }
     to {
-        margin-left: -100%;
+        width: 0;
     }
 }
 
