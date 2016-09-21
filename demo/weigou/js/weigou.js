@@ -72,6 +72,14 @@ $(function () {
   }
 
   $(window).load(function () {
-    alert('ok');
+    var num = 3;
+    var f = setInterval(function () {
+      if (num === 0) {
+        $('.modal').hide();
+        $('.bar').addClass('start-to');
+        clearInterval(f);
+      }
+      $('.modal .num').text(num--);
+    }, 1000);
   })
 });
