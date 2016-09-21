@@ -22,12 +22,17 @@ $.fn.animateRotate = function(angle, duration, complete) {
 $('#MyDiv2').animateRotate(90);
 
 $(function () {
-  $('.click-area').on('touchstart', start);
+  // $('.click-area').on('touchstart', start);
   $('.click-area').on('touchend', end);
+
+  $(".bar").bind('oanimationend animationend webkitAnimationEnd', function() {
+    gameover();
+  });
 
   var boxWidth = $('.dog').width();
   var mouthTop = $('.dog').offset().top + 4 * boxWidth / 7;
   var winWidth = $(window).width();
+  var count = 1;
   
   function randomfood() {
     var num = Math.floor(Math.random() * 5) + 1;
@@ -48,6 +53,7 @@ $(function () {
       'height': '25px',
       'opacity': '0.8'
     }, 500, function () {
+      $('#count').text(count++);
       $(this).remove();
       $('.face').addClass('mouse-up');
       setTimeout(function () {
@@ -59,5 +65,9 @@ $(function () {
   function start(e) {
     // $('.face').removeClass('mouse-up');
     // $('.face').removeClass('mouse-eat-active');
+  }
+
+  function gameover() {
+    $('.click-area').off();
   }
 });

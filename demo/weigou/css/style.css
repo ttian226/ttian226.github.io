@@ -142,42 +142,34 @@ body::after {
     color: gold;
 }
 
-.bar {
+.box {
     display: table-cell;
-    position: relative;
-    height: 100%;
-    width: 80%;
-
-    border: 1px solid gold;
-    background: #30250f;
-    border-radius: 15px;
-    box-shadow: inset 2px 2px 15px 0 black;
-}
-
-.bar .bar-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
-    border: 1px solid gold;
-    background: #30250f;
+    background: #757575;
+    border: 1px solid #f0b94e;
     border-radius: 15px;
     box-shadow: inset 2px 2px 15px 0 black;
+    padding: 1px;
 }
 
-.bar .bar-middle {
-    position: absolute;
-    top: 0;
-    left: 0;
+.inner {
+    background: transparent;
     width: 100%;
     height: 100%;
-    background: gold;
-    z-index: 100;
-    border-radius: 15px;
-    /*border: 1px solid #000;*/
+    border-radius: 13px;
+    overflow: hidden;
 }
+
+.bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    background: url("../img/bar.png") no-repeat center center;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+}
+
 
 .start-to {
     animation-name: timeout;
@@ -188,23 +180,23 @@ body::after {
 
 @keyframes timeout {
     from {
-        width: 100%;
+        margin-left: 0;
     }
     to {
-        width: 0%;
+        margin-left: -100%;
     }
 }
 
-/*.bar .bar-front {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background: #eee;*/
-    /*z-index: 200;*/
-    /*border-radius: 15px;*/
-/*}*/
+.count {
+    position: absolute;
+    top: 17%;
+    display: inline-block;
+    font-size: 60px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
 
 /*iphone6plus*/
 @media only screen and (min-width : 376px) {
@@ -236,6 +228,19 @@ body::after {
     }
     .time-box {
         height: 34px;
+    }
+    .box {
+        border-radius: 17px;
+    }
+    .inner {
+        border-radius: 15px;
+    }
+    .bar {
+        border-radius: 15px;
+    }
+    .count {
+        top: 15%;
+        font-size: 65px;
     }
 }
 
@@ -269,6 +274,19 @@ body::after {
     .time-box {
         height: 46px;
     }
+    .box {
+        border-radius: 23px;
+    }
+    .inner {
+        border-radius: 21px;
+    }
+    .bar {
+        border-radius: 21px;
+    }
+    .count {
+        top: 13%;
+        font-size: 70px;
+    }
 }
 
 /*iphone5*/
@@ -295,6 +313,19 @@ body::after {
     }
     .time-box {
         height: 26px;
+    }
+    .box {
+        border-radius: 13px;
+    }
+    .inner {
+        border-radius: 11px;
+    }
+    .bar {
+        border-radius: 11px;
+    }
+    .count {
+        top: 14%;
+        font-size: 50px;
     }
 }
 
@@ -329,6 +360,19 @@ body::after {
     .time-box {
         height: 24px;
     }
+    .box {
+        border-radius: 12px;
+    }
+    .inner {
+        border-radius: 10px;
+    }
+    .bar {
+        border-radius: 10px;
+    }
+    .count {
+        top: 10%;
+        font-size: 50px;
+    }
 }
 
 
@@ -341,5 +385,3 @@ body::after {
     transform: rotate(360deg);
 }
 */
-
-
