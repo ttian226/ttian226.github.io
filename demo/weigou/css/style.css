@@ -175,13 +175,44 @@ body::after {
 
 
 .start-to {
-    animation-name: timeout;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+    /*animation-name: timeout;*/
+    /*animation-duration: 15s;*/
+    /*animation-timing-function: linear;*/
+    /*animation-fill-mode: forwards;*/
+    animation: timeout 15s linear forwards;
+    -moz-animation: timeout 15s linear forwards;
+    -o-animation: timeout 15s linear forwards;
+    -webkit-animation: timeout 15s linear forwards;
 }
 
 @keyframes timeout {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+
+@-moz-keyframes timeout {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+
+@-webkit-keyframes timeout {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+
+@-o-keyframes timeout {
     from {
         margin-left: 0;
     }
