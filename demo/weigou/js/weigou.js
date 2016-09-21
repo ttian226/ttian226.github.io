@@ -70,4 +70,8 @@ $(function () {
   function gameover() {
     $('.click-area').off();
   }
+
+  $(window).load(function () {
+    alert('ok');
+  })
 });
