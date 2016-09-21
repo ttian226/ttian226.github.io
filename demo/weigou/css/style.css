@@ -9,6 +9,7 @@
 }
 
 body {
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
     margin: 0;
     background: url("../img/bg.png") no-repeat center center;
     background-size: cover;
@@ -165,9 +166,9 @@ body::after {
     width: 100%;
     height: 100%;
     border-radius: 13px;
-    /*background: url("../img/bar.png") no-repeat center center;*/
-    background: gold no-repeat center center;
-    box-shadow: inset -15px 1px 10px 3px rgba(255,255,255, 0.6), inset -35px 2px 20px 3px rgba(255,255,255, 0.5);
+    background: url("../img/bar.png") no-repeat center center;
+    /*background: gold no-repeat center center;*/
+    /*box-shadow: inset -15px 1px 10px 3px rgba(255,255,255, 0.6), inset -35px 2px 20px 3px rgba(255,255,255, 0.5);*/
     /*background-size: 100% 100%;*/
     background-size: cover;
 }
@@ -181,17 +182,11 @@ body::after {
 }
 
 @keyframes timeout {
-    /*from {*/
-        /*margin-left: 0;*/
-    /*}*/
-    /*to {*/
-        /*margin-left: -100%;*/
-    /*}*/
     from {
-        width: 100%;
+        margin-left: 0;
     }
     to {
-        width: 0;
+        margin-left: -100%;
     }
 }
 
@@ -204,6 +199,32 @@ body::after {
     width: 100%;
     text-align: center;
     z-index: 1;
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 500;
+    padding-top: 22%;
+    color: #fff;
+    text-align: center;
+}
+
+.modal .num {
+    /*position: relative;*/
+    font-size: 100px;
+    /*text-align: center;*/
+    margin-top: 15%;
+}
+
+.modal .title {
+    /*text-align: center;*/
+}
+
+.modal p {
+    /*text-align: center;*/
 }
 
 /*iphone6plus*/
@@ -250,6 +271,15 @@ body::after {
         top: 15%;
         font-size: 65px;
     }
+    .modal .title {
+        font-size: 36px;
+    }
+    .modal p {
+        font-size: 18px;
+    }
+    .modal .num {
+        font-size: 110px;
+    }
 }
 
 /*ipad*/
@@ -295,6 +325,15 @@ body::after {
         top: 13%;
         font-size: 70px;
     }
+    .modal .title {
+        font-size: 50px;
+    }
+    .modal p {
+        font-size: 26px;
+    }
+    .modal .num {
+        font-size: 120px;
+    }
 }
 
 /*iphone5*/
@@ -334,6 +373,16 @@ body::after {
     .count {
         top: 14%;
         font-size: 50px;
+    }
+    .modal .title {
+        font-size: 25px;
+    }
+    .modal p {
+        font-size: 14px;
+    }
+    .modal .num {
+        margin-top: 10%;
+        font-size: 90px;
     }
 }
 
@@ -380,6 +429,16 @@ body::after {
     .count {
         top: 10%;
         font-size: 50px;
+    }
+    .modal .title {
+        font-size: 24px;
+    }
+    .modal p {
+        font-size: 14px;
+    }
+    .modal .num {
+        margin-top: 5%;
+        font-size: 80px;
     }
 }
 
