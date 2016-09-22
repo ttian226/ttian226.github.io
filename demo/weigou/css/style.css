@@ -250,12 +250,100 @@ body::after {
     margin-top: 15%;
 }
 
-.modal .title {
-    /*text-align: center;*/
+
+
+.game-over_sharetip {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 3%;
+    background: url("../img/gameover/share.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 
-.modal p {
-    /*text-align: center;*/
+.game-over {
+    width: 350px;
+    padding-top: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.game-over .title {
+    width: 220px;
+    height: 30px;
+}
+
+.game-over .subtitle {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.jpnum {
+    color: red;
+    font-size: 25px;
+    margin: 0 8px;
+    font-style: italic;
+}
+
+.dw {
+    font-size: 20px;
+}
+
+.jpname {
+    font-style: italic;
+}
+
+.game-over .edog {
+    width: 286px;
+    height: 240px;
+}
+
+/*.score {*/
+    /*display: inline-block;*/
+    /*font-size: 26px;*/
+/*}*/
+
+.result {
+    color: #fff;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.beatnum {
+    color: #fdad2a;
+    margin: 0 8px;
+    font-size: 22px;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 300px;
+    height: 55px;
+}
+
+.dogbox {
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    top: 69%;
+    left: 44%;
+    font-size: 33px;
+    color: red;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    width: 60px;
+}
+
+.say {
+    position: absolute;
+    width: 130px;
+    height: 115px;
+    top: 18%;
+    left: 66%;
 }
 
 /*iphone6plus*/
@@ -365,6 +453,55 @@ body::after {
     .modal .num {
         font-size: 120px;
     }
+
+    .game-over_sharetip {
+        width: 120px;
+        height: 120px;
+    }
+    .game-over {
+        width: 500px;
+        padding-top: 20%;
+    }
+    .game-over .title {
+        width: 380px;
+        height: 50px;
+    }
+    .game-over .subtitle {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .jpnum {
+        font-size: 35px;
+    }
+    .dw {
+        font-size: 30px;
+    }
+    .game-over .edog {
+        width: 350px;
+        height: 290px;
+    }
+    .score {
+        font-size: 39px;
+        left: 45%;
+    }
+    .say {
+        width: 200px;
+        height: 176px;
+        top: 9%;
+        left: 64%;
+    }
+    .result {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .beatnum {
+        font-size: 35px;
+    }
+    .btn {
+        margin-top: 12px;
+        width: 380px;
+        height: 73px;
+    }
 }
 
 /*iphone5*/
@@ -414,6 +551,52 @@ body::after {
     .modal .num {
         margin-top: 10%;
         font-size: 90px;
+    }
+
+    .game-over_sharetip {
+        width: 60px;
+        height: 60px;
+    }
+    .game-over {
+        width: 280px;
+        padding-top: 18%;
+    }
+    .game-over .title {
+        width: 180px;
+        height: 25px;
+    }
+    .game-over .subtitle {
+        font-size: 16px;
+    }
+    .jpnum {
+        font-size: 22px;
+    }
+    .dw {
+        font-size: 16px;
+    }
+    .game-over .edog {
+        width: 220px;
+        height: 180px;
+    }
+    .score {
+        font-size: 25px;
+        width: 50px;
+    }
+    .say {
+        width: 106px;
+        height: 96px;
+    }
+    .result {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    .beatnum {
+        font-size: 20px;
+    }
+    .btn {
+        margin-top: 9px;
+        width: 252px;
+        height: 48px;
     }
 }
 
@@ -470,6 +653,54 @@ body::after {
     .modal .num {
         margin-top: 5%;
         font-size: 80px;
+    }
+
+    .game-over_sharetip {
+        width: 50px;
+        height: 50px;
+    }
+    .game-over {
+        width: 280px;
+        padding-top: 14%;
+    }
+    .game-over .title {
+        width: 180px;
+        height: 25px;
+    }
+    .game-over .subtitle {
+        font-size: 16px;
+    }
+    .jpnum {
+        font-size: 22px;
+    }
+    .dw {
+        font-size: 16px;
+    }
+    .game-over .edog {
+        width: 220px;
+        height: 180px;
+    }
+    .score {
+        font-size: 25px;
+        width: 50px;
+    }
+    .say {
+        width: 106px;
+        height: 96px;
+    }
+    .result {
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    .beatnum {
+        font-size: 20px;
+    }
+    .btn {
+        margin-top: 6px;
+        width: 240px;
+        height: 45px;
     }
 }
 

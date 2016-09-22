@@ -29,6 +29,10 @@ $(function () {
     gameover();
   });
 
+  $('body').on('touchmove', function (e) {
+    e.preventDefault();
+  });
+
   var boxWidth = $('.dog').width();
   var mouthTop = $('.dog').offset().top + 4 * boxWidth / 7;
   var winWidth = $(window).width();
@@ -69,6 +73,22 @@ $(function () {
 
   function gameover() {
     $('.click-area').off();
+    hideplayitems();
+    showgameover();
+  }
+
+  function hideplayitems() {
+    $('.dog').hide();
+    $('.click-area').hide();
+    $('.tishi').hide();
+    $('.count').hide();
+    $('.time-box').hide();
+  }
+
+  function showgameover() {
+    $('.game-over_sharetip').show();
+    $('.game-over').show();
+    $('.score').text(count);
   }
 
   $(window).load(function () {
