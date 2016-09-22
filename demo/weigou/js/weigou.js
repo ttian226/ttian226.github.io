@@ -88,7 +88,7 @@ $(function () {
   function showgameover() {
     $('.game-over_sharetip').show();
     $('.game-over').show();
-    $('.score').text(count);
+    $('.score').text(count-1);
   }
 
   $(window).load(function () {

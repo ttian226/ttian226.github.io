@@ -270,26 +270,26 @@ body::after {
 }
 
 .game-over .title {
-    width: 220px;
-    height: 30px;
+    width: 200px;
+    height: 27px;
 }
 
 .game-over .subtitle {
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 2px;
     margin: 15px 0;
 }
 
 .jpnum {
     color: red;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0 8px;
     font-style: italic;
 }
 
 .dw {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .jpname {
@@ -297,8 +297,8 @@ body::after {
 }
 
 .game-over .edog {
-    width: 286px;
-    height: 240px;
+    width: 260px;
+    height: 222px;
 }
 
 /*.score {*/
@@ -308,16 +308,17 @@ body::after {
 
 .result {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
     letter-spacing: 4px;
-    margin: 15px 0;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .beatnum {
     color: #fdad2a;
     margin: 0 8px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .btn {
@@ -332,9 +333,9 @@ body::after {
 
 .score {
     position: absolute;
-    top: 69%;
+    top: 70%;
     left: 44%;
-    font-size: 33px;
+    font-size: 28px;
     color: red;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     width: 60px;
@@ -581,8 +582,9 @@ body::after {
         height: 180px;
     }
     .score {
-        font-size: 25px;
+        font-size: 24px;
         width: 50px;
+        top: 69%;
     }
     .say {
         width: 106px;
@@ -667,23 +669,25 @@ body::after {
     }
     .game-over .title {
         width: 180px;
-        height: 25px;
+        height: 23px;
     }
     .game-over .subtitle {
-        font-size: 16px;
-        margin: 10px 0;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
     .jpnum {
-        font-size: 22px;
+        font-size: 16px;
     }
     .dw {
-        font-size: 16px;
+        font-size: 14px;
     }
     .game-over .edog {
         width: 220px;
         height: 180px;
     }
     .score {
+        top: 69%;
         font-size: 25px;
         width: 50px;
     }
@@ -692,13 +696,13 @@ body::after {
         height: 96px;
     }
     .result {
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 2px;
         margin-bottom: 5px;
         margin-top: 0;
     }
     .beatnum {
-        font-size: 20px;
+        font-size: 16px;
     }
     .btn {
         margin-top: 3px;
