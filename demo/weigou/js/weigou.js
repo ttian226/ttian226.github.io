@@ -22,6 +22,7 @@ $.fn.animateRotate = function(angle, duration, complete) {
 $('#MyDiv2').animateRotate(90);
 
 $(function () {
+  alert($(window).height() + ',' + $('body').height())
   // $('.click-area').on('touchstart', start);
   $('.click-area').on('touchend', end);
 
