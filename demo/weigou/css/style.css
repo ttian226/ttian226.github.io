@@ -263,7 +263,7 @@ body::after {
 
 .game-over {
     width: 350px;
-    padding-top: 22%;
+    padding-top: 17%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -278,6 +278,7 @@ body::after {
     color: #fff;
     font-size: 20px;
     letter-spacing: 2px;
+    margin: 15px 0;
 }
 
 .jpnum {
@@ -310,6 +311,7 @@ body::after {
     font-size: 18px;
     font-style: italic;
     letter-spacing: 4px;
+    margin: 15px 0;
 }
 
 .beatnum {
@@ -559,7 +561,7 @@ body::after {
     }
     .game-over {
         width: 280px;
-        padding-top: 18%;
+        padding-top: 12%;
     }
     .game-over .title {
         width: 180px;
@@ -661,7 +663,7 @@ body::after {
     }
     .game-over {
         width: 280px;
-        padding-top: 14%;
+        padding-top: 10%;
     }
     .game-over .title {
         width: 180px;
@@ -669,6 +671,7 @@ body::after {
     }
     .game-over .subtitle {
         font-size: 16px;
+        margin: 10px 0;
     }
     .jpnum {
         font-size: 22px;
@@ -691,16 +694,16 @@ body::after {
     .result {
         font-size: 16px;
         letter-spacing: 2px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin-top: 0;
     }
     .beatnum {
         font-size: 20px;
     }
     .btn {
-        margin-top: 6px;
-        width: 240px;
-        height: 45px;
+        margin-top: 3px;
+        width: 220px;
+        height: 40px;
     }
 }
 
