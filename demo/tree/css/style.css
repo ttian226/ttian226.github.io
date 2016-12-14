@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+}
+
+.tree {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background: url("../img/tree.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+
+.bottom .left {
+  width: 100px;
+  height: 100px;
+  // background: #ffebee;
+  float: left;
+}
+
+.bottom .right {
+  width: 100px;
+  height: 100px;
+  // background: #ffebee;
+  float: right;
+}
+
+.coin {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: url("../img/coin.png") no-repeat center center;
+  background-size: 100% 100%;
+  display: none;
+}
+
+.coin-0 {
+  top: 10%;
+  left: 50%;
+}
+
+.coin-1 {
+  top: 20%;
+  left: 30%;
+}
+
+.coin-2 {
+  top: 17%;
+  left: 60%;
+}
+
+.coin-3 {
+  top: 26%;
+  left: 70%;
+}
+
+.coin-4 {
+  top: 32%;
+  left: 57%;
+}
+
+.coin-5 {
+  top: 30%;
+  left: 15%;
+}
+
+.coin-6 {
+  top: 50%;
+  left: 20%;
+}
+
+.coin-7 {
+  top: 55%;
+  left: 40%;
+}
+
+.coin-8 {
+  top: 45%;
+  left: 60%;
+}
+
+.coin-9 {
+  top: 42%;
+  left: 80%;
+}
+
+.coin-10 {
+  top: 8%;
+  left: 30%;
+}
+
+.coin-11 {
+  top: 57%;
+  left: 63%;
+}
+
+.coin-12 {
+  top: 22%;
+  left: 46%;
+}
+
+.coin-13 {
+  top: 43%;
+  left: 43%;
+}
+
+.coin-14 {
+  top: 35%;
+  left: 35%;
+}
+
+@keyframes down {
+  to {
+    top: 100%
+  }
+}
+
+.move {
+  animation: down 1s forwards;
+}
+
