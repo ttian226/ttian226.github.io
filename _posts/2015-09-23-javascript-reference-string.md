@@ -438,7 +438,7 @@ var x = new String('Hello world');
 console.log(x.valueOf()); // Displays 'Hello world'
 ```
 
-##### [String.prototype.trim()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
+##### [String.prototype.trim()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) ES5
 
 去除字符串两端的空白
 
@@ -486,3 +486,23 @@ var str = 'Oh brave new world that has such people in it.';
 var arr = str.split(' ', 3);
 console.log(arr);   //["Oh", "brave", "new"]
 ```
+
+### ES6 String
+
+#### 字符串的遍历器接口
+
+ES6为字符串添加了遍历器接口，使得字符串可以被`for...of`循环遍历。
+
+```javascript
+for (let codePoint of 'foo') {
+  console.log(codePoint)
+}
+// "f"
+// "o"
+// "o"
+```
+
+##### [String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+
+
+
