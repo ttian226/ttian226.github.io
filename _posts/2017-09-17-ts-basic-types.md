@@ -168,3 +168,30 @@ let n: null = null;
 
 ### Never
 
+`never`表示哪些根本不会存在的类型。例如`never`用于函数表达式或箭头函数表达式中总是抛出异常的返回值。
+
+```typescript
+function error(message: string): never {
+    throw new Error(message);
+}
+```
+
+### Type assertions（断言）
+
+有时候你会比TypeScript本身更清楚一个值的类型。断言就是告诉编译器“相信我，我知道自己在干什么”。断言有些像其它语言的强制类型转换，但没有特殊的数据类型检查和解构。它没有运行时刻的影响，只发生在编译阶段。TypeScript假设你是个程序员并且已经进行了必要的检查。
+
+断言有两种形式，一是`尖括号`语法：
+
+```typescript
+let someValue: any = 'this is a string';
+let strLength: number = (<string>someValue).length;
+```
+
+另一种是`as`语法：
+
+```typescript
+let someValue: any = 'this is a string';
+let strLength: number = (someValue as string).length;
+```
+
+这两种方式是等价的。用哪一个取决于你的个人偏好，但是在JSX中只允许使用`as`语法。
